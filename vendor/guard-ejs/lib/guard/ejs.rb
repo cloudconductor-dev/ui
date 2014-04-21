@@ -23,7 +23,7 @@ module Guard
       @options = {
         run_on_start: true,
         input: 'public/js/template',
-        output: 'public/js/template',
+        output: 'public/js/template'
       }.update(options)
 
       @options[:input] = Pathname(@options[:input])

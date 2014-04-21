@@ -51,7 +51,7 @@ guard :jshint do
 end
 
 # automatically jasmine
-require './vendor/guard-jasmine-phantomjs/lib/guard/jasmine-phantomjs'
+require './vendor/guard-jasmine-phantomjs/lib/guard/jasmine_phantomjs'
 guard 'jasmine-phantomjs', :port => JASMINE_PORT, :root => File.dirname(__FILE__), :spec => nil do
   ignore(%r{public/js/all.js})
   watch(%r{.*\.js$})

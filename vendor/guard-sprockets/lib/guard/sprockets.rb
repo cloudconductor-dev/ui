@@ -34,6 +34,7 @@ module Guard
     def start
     end
 
+    # rubocop: disable UselessAssignment
     def run_all
       gem_root = File.expand_path('../../', File.dirname(__FILE__))
       template_file = File.expand_path('lib/index.html.erb', gem_root)
@@ -41,7 +42,7 @@ module Guard
 
       # generate test html
       javascript_files = collect_files ['public/js'], 'application.js'
-      stylesheet_files = collect_files ['public/css'], 'application.css' # rubocop: disable UselessAssignment
+      stylesheet_files = collect_files ['public/css'], 'application.css'
 
       # exclude non js files
       javascript_files.reject! do |path|

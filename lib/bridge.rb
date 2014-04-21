@@ -23,10 +23,10 @@ class Bridge
     config_path = File.expand_path('../config/bridge.yml', File.dirname(__FILE__)) unless config_path
     @config = YAML.load_file config_path
 
-    set_environment((ENV['RAILS_ENV'] || :development).to_sym)
+    self.environment = (ENV['RAILS_ENV'] || :development).to_sym
   end
 
-  def set_environment(environment)
+  def environment=(environment)
     @environment = environment
 
     config = @config[@environment.to_s][@target.to_s]

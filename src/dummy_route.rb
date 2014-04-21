@@ -686,7 +686,7 @@ def get_user(n)
   user[:id] = n.to_s
   user[:login_id] = "user#{n}"
   user[:name] = names[n % 5] + (n / 6).to_s
-  user[:crypted_password] = Digest::SHA1.hexdigest"crypted_password_#{n}"
+  user[:crypted_password] = Digest::SHA1.hexdigest "crypted_password_#{n}"
   user[:role] = n - ((n - 1) / 3 * 3)
 
   user

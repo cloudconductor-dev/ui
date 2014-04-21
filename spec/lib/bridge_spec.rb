@@ -78,9 +78,9 @@ describe Bridge do
       @bridge = Bridge.new :maker, config_path
     end
 
-    describe '#set_environment' do
+    describe '#environment=' do
       it 'は指定した環境の設定に切り替える' do
-        @bridge.set_environment :production
+        @bridge.environment = :production
         expect(@bridge.protocol).to eq('https')
         expect(@bridge.host).to eq('192.168.0.1')
         expect(@bridge.port).to eq(8080)
