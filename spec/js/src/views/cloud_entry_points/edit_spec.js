@@ -1,6 +1,6 @@
 describe("CloudEntryPointEdit", function() {
   beforeEach(function() {
-    Helper.spyOnFetch(Backbone.Collection.prototype, function() {
+    Helper.spyOnFetch(App.Collections.Infrastructures.prototype, function() {
       for(var i=1; i<=4; i++) {
         var infrastructure = new Backbone.Model();
         infrastructure.set("id", i);
