@@ -2,6 +2,7 @@ require 'pathname'
 require 'rubygems' unless defined? ::Gem
 require File.dirname( __FILE__ ) + '/app'
 
-root = Pathname(File.expand_path(__FILE__)).parent.basename.to_s
-map ("/#{root}") { run Sinatra::Application }
-
+work_dir = File.dirname(File.expand_path(__FILE__))
+root = Pathname(ENV['CONDUCTOR_ROOT'] || work_dir)
+prefix = Pathname(work_dir).relative_path_from(root.parent)
+map ("/#{prefix}") { run Sinatra::Application }
