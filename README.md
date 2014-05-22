@@ -35,31 +35,41 @@ Prerequisites
 Quick Start
 ===========
 
-- Clone github repository
+### Clone github repository
 
-    git clone https://github.com/cloudconductor/ui.git
+```bash
+git clone https://github.com/cloudconductor/ui.git
+```
 
-- Copy and edit setting file to connect other applications which are maker and conductor.
+### Copy and edit setting file to connect other applications which are maker and conductor.
 
-    cd ui/config
-    cp bridge.yml.smp bridge.yml
-    vi bridge.yml
+```bash
+cd ui/config
+cp bridge.yml.smp bridge.yml
+vi bridge.yml
+```
 
 Change `protocol`, `host`, `port` and `root_path` in development section to connect each applications.
 
-- Install dependencies.
+### Install dependencies.
 
-    cd ..
-    bundle install
-    bundle exec rake init
+```bash
+cd ..
+bundle install
+bundle exec rake init
+```
 
-- Run server
+### Run server
 
-    bundle exec rake server:start
+```bash
+bundle exec rake server:start
+```
 
-- Stop server
+### Stop server
 
-    bundle exec rake server:stop
+```bash
+bundle exec rake server:stop
+```
 
 
 Copyright and License
