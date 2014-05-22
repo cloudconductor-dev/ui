@@ -27,8 +27,8 @@ task :init do
 
   Guard.setup
 
-  Guard.guards('ejs').run_all
-  Guard.guards('sprockets').run_all
+  Guard.plugin('ejs').run_all
+  Guard.plugin('sprockets').run_all
 end
 
 UNICORN_PID = 'tmp/unicorn.pid'
